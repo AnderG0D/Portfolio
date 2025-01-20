@@ -151,7 +151,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/Li-In-Bug.png"
+              src="/linkedin.png"
               alt="LinkedIn"
               width="70"
               height="70"
