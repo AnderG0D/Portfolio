@@ -125,6 +125,12 @@ export default function Home() {
           <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
             Express
           </span>
+          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
+            Git
+          </span>
+          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
+            SQL
+          </span>
         </div>
       </section>
 
@@ -190,7 +196,7 @@ export default function Home() {
           </a>
           {/* CV */}
           <a
-            href="/edgar_anderson_resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
