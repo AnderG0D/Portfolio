@@ -123,6 +123,9 @@ export default function Home() {
             Microsoft SharePoint
           </span>
           <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
+            Microsoft PowerBI
+          </span>
+          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
             Express
           </span>
           <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
