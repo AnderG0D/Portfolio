@@ -199,7 +199,7 @@ export default function Home() {
           </a>
           {/* CV */}
           <a
-            href="/resume.pdf"
+            href="/resume_ingles.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
