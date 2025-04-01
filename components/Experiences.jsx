@@ -6,18 +6,22 @@ export function ExperienceSection() {
         id: 1,
         title: "FR-Tecnologías de Flujo Emerson",
         position: "Analyst Programmer Intern",
-        duration: "June 2024 - November 2024",
-        location: "Chihuahua, Mexico",
+        duration: "June 2024 - December 2024",
+        location: "Chihuahua, México",
         description: `
           Description of the experience.
         `,
         skills: [
+          "C#",
+          "Microsoft SQL Server",
+          "Microsoft Visual Studio",
           "Microsoft Power Apps",
           "Microsoft Power Automate",
+          "Microsoft Power BI",
           "Microsoft SharePoint"
         ],
       },
-      // Agrega más experiencias aquí si es necesario
+      
     ];
   
     return (
