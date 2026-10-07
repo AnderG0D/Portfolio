@@ -1,221 +1,76 @@
-import Link from "next/link";
 import Image from "next/image";
 import ProjectsSection from "../components/Projects";
 import { ExperienceSection } from "@/components/Experiences";
 
+const skillGroups = [
+  { label: "Backend", skills: ["Node.js", "NestJS", "TypeScript", "JavaScript", "REST APIs"] },
+  { label: "Data", skills: ["Supabase", "PostgreSQL", "SQL"] },
+  { label: "Tools", skills: ["Git", "Docker", "Evolution API"] },
+];
+
 export default function Home() {
   return (
-    <div className="w-full h-full bg-gradient-to-b from-black via-[#4b0000] to-black bg-[radial-gradient(circle, rgba(139,0,0,0.6) 20%, rgba(0,0,0,0.8) 80%)] backdrop-blur-sm text-white">
-
-
-      {/* Sección Home*/}
-      <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-8 space-y-8 md:space-y-0 md:space-x-12">
-        {/* Texto */}
-        <div className="flex flex-col items-center md:items-start space-y-6">
-          <h1 className="text-6xl md:text-7xl font-extrabold text-yellow-500">Eitale! I am Edgar Anderson</h1>
-          <h2 className="text-3xl md:text-4xl text-yellow-300">Full Stack Developer & Game Programmer</h2>
-          <p className="max-w-2xl text-lg md:text-xl text-gray-300">
-            My passion is to create and develop software that is fun and engaging for users.
-            I have experience with a variety of programming languages and tools, and I'm always looking for new ways to improve my skills.
-            I love learning everything about the world of programming and technology, diving into all kinds of topics to expand my knowledge.
-            I obsess over every detail to ensure that every project meets or exceeds client expectations, and I bring the same dedication to my personal projects.
-            My goal is to use my full potential to create amazing, original, and entertaining things because I was born to do this.
-            I strive to build unique, fun experiences and turn them into successful ventures.
-          </p>
-          <button className="px-8 py-4 bg-yellow-500 text-xl text-black font-bold rounded-md hover:bg-yellow-600 transition-all">
-            <Link href="#contact">Contact Me</Link>
-          </button>
+    <main>
+      <section className="hero" id="home" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow hero-kicker">Backend developer · Chihuahua, Mexico</p>
+          <h1 id="hero-title">Edgar<br />Anderson<span className="accent">.</span></h1>
+          <p className="hero-role">I build backend systems and practical software.</p>
+          <p className="hero-intro">Focused on Node.js, NestJS, TypeScript, and data driven applications.</p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#projects">Explore selected work <span aria-hidden="true">↓</span></a>
+            <a className="text-link" href="mailto:m.anzoedgar11@hotmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-
-        {/* Imagen */}
-        <div className="mt-8 md:mt-0">
-          <Image
-            src="/edgar_resume.jpeg"
-            alt="EA"
-            width={350}
-            height={450}
-            className="rounded-lg border-4 border-yellow-500 shadow-2xl hover:shadow-yellow-500 hover:scale-105 transition-transform"
-          />
+        <div className="hero-visual" aria-label="Portrait of Edgar Anderson">
+          <div className="portrait-frame">
+            <Image src="/edgar_resume.jpeg" alt="Edgar Anderson" fill priority sizes="(max-width: 760px) 72vw, 38vw" className="portrait-image" />
+          </div>
+          <p className="portrait-caption">Developer · builder · lifelong learner</p>
         </div>
+        <a className="scroll-cue" href="#about"><span></span> Scroll to explore</a>
       </section>
 
-      {/* Sección About */}
-      <section id="about" className="min-h-screen flex flex-col items-center justify-center text-center px-8 space-y-8">
-        <h2 className="text-6xl font-bold text-yellow-500">About Me</h2>
-        <p className="max-w-3xl text-xl text-gray-300 leading-relaxed">
-        Since I was a child, I have always been fascinated by technology and science fiction. 
-        I dreamed of creating my own inventions and exploring the endless possibilities of innovation. 
-        Over time, I discovered my talent in programming, electronics, mathematics, and science, which fueled my passion even more. 
-        Currently, I am a proud graduate of the Instituto Tecnológico de Chihuahua II with a degree in Computer Systems Engineering, specializing in full-stack development. 
-        While actively seeking new career opportunities, I am enhancing my skills by working through the Google Digital Marketing & E-commerce Professional Certificate and revisiting both new and foundational concepts in my field.
-        At the same time, I am wholeheartedly pursuing my passion for programming and game development. 
-        I'm currently focused on my project, "RunBRun," an exciting endless runner game with a Mexican twist! Looking ahead, my goal is to continue growing and mastering programming and business, building a grand empire of science, technology, and entertainment. 
-        The future holds limitless possibilities, and I am determined to make them a reality. Amen!
-        </p>
-      </section>
-
-      {/* Sección Skills */}
-      <section id="skills" className="min-h-screen flex flex-col items-center justify-center text-center px-8 space-y-8">
-        <h2 className="text-6xl font-bold text-yellow-500">Skills</h2>
-        {/* Contenedor de Skills */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            C++
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            JavaScript
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Java
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            HTML5
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            CSS3
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Node.js
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            React
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Next.js
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Tailwind CSS
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            MongoDB
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            MySQL
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Flutter
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Supabase
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Unreal Engine
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Blender
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Python
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            C#
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Figma
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Microsoft Power Apps
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Microsoft Power Automate
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Microsoft SharePoint
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Microsoft PowerBI
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Express
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            Git
-          </span>
-          <span className="px-6 py-3 bg-yellow-500 text-black text-lg font-bold rounded-full shadow-md hover:bg-yellow-600 transition-all">
-            SQL
-          </span>
+      <section className="section about-section" id="about" aria-labelledby="about-title">
+        <div className="section-heading">
+          <p className="eyebrow">A little about me</p>
+          <h2 id="about-title">Thoughtful systems.<br /><span className="muted-heading">Useful outcomes.</span></h2>
+        </div>
+        <div className="about-copy">
+          <p>I’m a Computer Systems Engineering graduate from Instituto Tecnológico de Chihuahua II, with experience in backend development, internal tools, and process support.</p>
+          <p>I enjoy turning operational needs into clear software: APIs, data workflows, and applications that help people do their work.</p>
+          <div className="language-line"><span className="eyebrow">Languages</span><span>Spanish · Native</span><span>English · C1 (EF SET, Mar 2024)</span></div>
         </div>
       </section>
 
-      {/* Sección Projects */}
+      <section className="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div className="skills-title-block"><p className="eyebrow">Tools of the trade</p><h2 id="skills-title">Core stack<span className="accent">.</span></h2></div>
+        <div className="skill-groups">
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.label}>
+              <h3>{group.label}</h3>
+              <p>{group.skills.join(" · ")}</p>
+            </div>
+          ))}
+        </div>
+        <p className="certificate-line"><span className="eyebrow">Certificate</span> Google Digital Marketing &amp; E-commerce · May 2025</p>
+      </section>
+
       <ProjectsSection />
-
-      {/* Sección Experience */}
       <ExperienceSection />
 
-      {/* Sección Contact */}
-      <section
-        id="contact"
-        className="min-h-screen flex flex-col items-center justify-center px-8 space-y-8 bg-gradient-to-br from-red-900 via-transparent to-transparent bg-blur"
-        style={{
-          background: "radial-gradient(circle, rgba(139,0,0,0.4) 10%, transparent 50%)",
-        }}
-      >
-        <h2 className="text-6xl font-bold text-yellow-500 z-10">Contact Me!</h2>
-        <div className="flex flex-row items-center space-x-8 z-10">
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/edgar-anderson-82a87427b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/linkedin.png"
-              alt="LinkedIn"
-              width="70"
-              height="70"
-              className="hover:scale-110 transition-transform"
-            />
-          </a>
-          {/* GitHub */}
-          <a
-            href="https://github.com/AnderG0D"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/github-cat-1.png"
-              alt="Github"
-              width="70"
-              height="70"
-              className="hover:scale-110 transition-transform"
-              style={{ filter: "invert(1)" }}
-            />
-          </a>
-          {/* Email */}
-          <a
-            href="mailto:m.anzoedgar11@hotmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/email.png"
-              alt="Email"
-              width="70"
-              height="70"
-              className="hover:scale-110 transition-transform"
-              style={{ filter: "invert(1)" }}
-            />
-          </a>
-          {/* CV */}
-          <a
-            href="/resume_ingles.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/resume.png"
-              alt="Resume"
-              width="70"
-              height="70"
-              className="hover:scale-110 transition-transform"
-              style={{ filter: "invert(1)" }}
-            />
-          </a>
+      <footer className="contact-section" id="contact">
+        <div className="contact-topline"><span className="eyebrow">Have a role or project in mind?</span><span className="footer-mark">EA<span className="accent">.</span></span></div>
+        <h2>Let’s make<br />something useful.</h2>
+        <a className="contact-email" href="mailto:m.anzoedgar11@hotmail.com">m.anzoedgar11@hotmail.com <span aria-hidden="true">↗</span></a>
+        <div className="contact-links" aria-label="Contact links">
+          <a href="tel:6141281698">614 128 1698</a>
+          <a href="https://www.linkedin.com/in/edgar-anderson-82a87427b" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/AnderG0D" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="/resume_ingles.pdf" target="_blank" rel="noreferrer">Resume PDF <span aria-hidden="true">↗</span></a>
         </div>
-      </section>
-
-
-    </div>
+        <div className="footer-bottom"><span>Edgar Anderson</span><span>Chihuahua, Mexico</span><span>© {new Date().getFullYear()}</span></div>
+      </footer>
+    </main>
   );
 }

@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "Edgar Anderson",
-  description: "Portfolio",
+  title: "Edgar Anderson — Backend Developer",
+  description: "Backend developer in Chihuahua, Mexico. Focused on Node.js, NestJS, TypeScript, and practical software.",
 };
 
 export default function RootLayout({ children }) {
